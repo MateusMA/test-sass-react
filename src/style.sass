@@ -10,11 +10,15 @@
     justify-content: space-between
     align-items: center
     padding: 1rem
+    @media(max-width: 425px)
+        padding: 0
     &-logo
         background: linear-gradient(#dd4600, #ff6600, #ff7b00, #ffae00)
         border-radius: 100px
         height: calc(85px - 2vmin)
         width: calc(85px - 2vmin)
+        @media(max-width: 425px)
+            display: none
     &-navbar
         margin-top: 3%
         ul
@@ -33,33 +37,50 @@
     height: 100%
     display: flex
     flex-wrap: wrap
+    @media(max-width: 425px)
+        flex-direction: column
 #black-line
     height: 0.6em
     width: 100%
-    background-color: black
+    background-color: black    
+    @media(max-width: 425px)
+        height: 0.2em
 #sunset-img
     height: 30rem
     width: 23%
     margin: 1%
+    @media(max-width: 425px)
+        width: 100%
+        margin: 0
 #heaven
     display: flex
     flex-direction: column
     height: 26rem
     width: 63%
     margin-top: 1%
+    @media(max-width: 425px)
+        width: 100%
+        margin-top: 0
     &-img
         height: 99%
         width: 100%
         margin-left: 3%
+        @media(max-width: 425px)
+            margin-left: 0
     &-description
         height: 1%
         width: 100%
         margin-left: 3%
         text-align: justify
+        @media(max-width: 425px)
+            width: 87%
+            margin-left: 0
 .App-footer
     width: 100%
     text-align: center
     background-color: rgba(0, 0, 0, 0.1)
+    @media(max-width: 425px)
+        display: none
 body
     background-image: linear-gradient(rgba(255, 255, 255, 0.719), rgb(255, 255, 255)), 
     url(../public/heaven.jpg)
@@ -68,6 +89,8 @@ body
     min-height: 100%
     display: flex
     justify-content: flex-end
+    @media(max-width: 425px)
+        display: none
     ul
         height: 100%
         display: flex
